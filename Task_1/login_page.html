@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="header-line"></div>
+    <div class="header-button"> <a href="https://rs.ge"><img src="RSLogoNew.png"></a>
+        <form class="login-form">
+            <fieldset>
+                <input id="login" name="login" type="text" placeholder="მომხმარებლის სახელი" />
+                <input id="password" name="password" type="password" pattern="[a-z0-9]{8,}" placeholder="პაროლი" />
+                <button id="login-button" onclick="authentication()">ავტორიზაცია</button>
+                <button id="registration-button" onclick="add_user()">რეგისტრაცია</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <main>
+
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
