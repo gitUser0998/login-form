@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>ავტორიზაცია</title>
+</head>
+
+<body>
+    <div class="login">
+        <div id="leftSide">
+
+            <div class="user_login">
+
+                <div class="login_pane">
+                    <div id="authorization">
+                        <input type="text" placeholder="მომხმარებელი ან საიდენტიფიკაციო კოდი" id="username"
+                            maxlength="60">
+                        <input type="password" placeholder="პაროლი" id="password" maxlength="50">
+                        <div style="display:none">
+                            <label>
+                                <input type="checkbox" id="checkName">
+                                <l>ავტორიზაცია საიდენტიფიკაციო ნომრით</l>
+                            </label>
+                        </div>
+                        <input type="button" id="btnLogin" class="btn_login" value="ავტორიზაცია"
+                            onclick="Authenticate()">
+                        <div style="padding-top: 30px"><a href="registration.html" id="a_register"
+                                style="font-weight: bold;">
+                                <l>რეგისტრაცია</l>
+                            </a></div>
+                        <div style="padding-top: 10px"><a href="/PassRecovery.aspx">
+                                <l>მომხმარებლის / პაროლის აღდგენა</l>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="rightSide">
+
+
+            <div id="twoStepVerification">
+                <span id="header3">
+                    <l>ორბიჯიანი (SMS) ავტორიზაცია</l>
+                </span>
+                <div class="divStyle">
+                    <l>შემოსავლების სამსახურის ელექტრონული სერვისების გვერდზე მომხმარებლის უფლებების,
+                        უსაფრთხოებისა და ინფორმაციის</l>
+                    <span id="point3">... </span>
+                    <a id="stepShow" href="#" onclick="showSpStyle();return false;" style="font-size: 13px;">
+                        <l>იხილეთ მეტი</l>
+                    </a>
+
+                    <span style="text-align: justify; display: none" id="stHide">
+
+                        <l>კონფიდენციალურობის დაცვის მიზნით, შემუშავდა ელექტრონული სერვისების გვერდზე
+                            ავტორიზაციის დამატებითი მექანიზმი, ეგრეთ წოდებული </l>
+                        <b>
+                            <l>ორბიჯიანი (SMS) ავტორიზაცია</l>
+                        </b>.<br>
+                        <br>
+                        <l>თქვენ საშუალება გაქვთ, გაააქტიუროთ ავტორიზაციის ეს მექანიზმი და სისტემასთან
+                            დაკავშირებისას, სახელის და პაროლის შეყვანის შემდგომ, თქვენ მიერ</l>
+                        <b>
+                            <l>წინასწარ მითითებულ ტელეფონის ნომერზე</l>
+                        </b>
+                        <l>, SMS შეტყობინების სახით, მოგივათ </l>
+                        <b>
+                            <l>ავტორიზაციის კოდი</l>
+                        </b>
+                        <l>და მხოლოდ ამის შემდგომ შეძლებთ სისტემაში მუშაობას. ეს პროცედურა დაგიცავთ მომხმარებლის
+                            სახელის და პაროლის მოპარვის შემთხვევაშიც კი თქვენს პორტალზე არასანქცირებული
+                            შეღწევისგან.</l>
+                        <br>
+                        <br>
+                        <l>ორბიჯიანი (SMS) ავტორიზაციის ჩართვისას, თქვენ აუცილებლად მოგიწევთ კოდური სიტყვის
+                            დაფიქსირება სისტემაში. </l>
+                        <b>
+                            <l>კარგად დაიმახსოვრეთ კოდური სიტყვა</l>
+                        </b>,
+                        <l>რადგან მისი ნახვა და შეცვლა შეუძლებელია. კოდური სიტყვის დახმარებით თქვენ შეძლებთ
+                            სისტემაში ავტორიზაციის გარეშე ტელეფონის ნომრის შეცვლას.</l>
+                        <br>
+                        <br>
+                        <b>
+                            <l>იმ შემთხვევაში, თუ თქვენ დაგავიწყდათ პაროლი და კოდური სიტყვა, მათ შეცვლას
+                                მოახერხებთ შემოსავლების სამსახურის ნებისმიერ სერვისცენტრში.</l>
+                        </b>
+                        <a href="#" onclick="hideSpStyle();return false;" style="font-size: 13px;">
+                            <l>დამალვა</l>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <hr>
+            <div id="protocol">
+                <span id="header1">
+                    <l>პროტოკოლში ცვლილების შესახებ შეტყობინებების გამოწერა</l>
+                    !
+                </span>
+                <div class="divStyle">
+                    <l>თუ თქვენ, იყენებთ შემოსავლების სამსახურის მიერ შემოთავაზებულ ვებ-სერვისებს (ა/ფაქტურა,
+                        სასაქონლო ზედნადების და სხვა</l>
+                    <span id="point">... </span>
+                    <a id="protShow" href="#" onclick="showPStyle();return false;" style="font-size: 13px;">
+                        <l>იხილეთ მეტი</l>
+                    </a>
+                    <span id="sHide" style="display: none;">
+                        <l>სახის მონაცემების წარმოება) და </l>
+                        <b>
+                            <l>აღნიშნული სერვისები ჩაშენებული გაქვთ თქვენს პროგრამულ პროდუქტებში</l>
+                        </b>,
+                        <l>გთხოვთ შეავსოთ </l>
+                        <a style="color: #1ea3f0" href="/ProtocolSubscribe.aspx">
+                            <l>ელექტრონული ფორმა</l>
+                        </a>
+                        <l>რათა დროულად მიიღოთ ინფორმაცია ვებ-სერვისებში ტექნიკური ცვლილებების დაგეგმვისა და
+                            მიმდინარეობების შესახებ. </l>
+                        <a id="protHide" href="#" onclick="hidePStyle();return false;" style="font-size: 13px;">
+                            <l>დამალვა</l>
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="LoginFooter">
+            <table>
+                <tbody>
+                    <tr>
+                        <td rowspan="2" style="width: 60%">
+                            <div>
+                                <l>საინფორმაციო ცენტრი</l>
+                            </div>
+                            <div style="margin-top: 3px; font-size: 16px;"><b>2 299 299</b></div>
+                            <br>
+                            <div onclick="$('#btnChangeLangHiddenLogin').click()">
+                                <label id="LanguageSwitch">English Version</label>
+                            </div>
+                        </td>
+                        <td style="width: 20%"><i class="material-icons">file_download</i><label
+                                onclick="window.location.href='/app/Downloads'">
+                                <l>დამხმარე პროგრამები</l>
+                            </label>
+                        </td>
+                        <td style="width: 20%"><i class="material-icons">ondemand_video</i><label
+                                onclick="window.location.href='app/VideoHelp'">
+                                <l>ვიდეო ინსრტუქცია</l>
+                            </label></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%"><i class="material-icons">help</i><label
+                                onclick="window.location.href='http://wiki.rs.ge/'">
+                                <l>WIKI</l>
+                            </label></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> -->
+    </div>
+
+</body>
+
+</html>
